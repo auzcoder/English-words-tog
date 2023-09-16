@@ -32,6 +32,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # so'zlar uchun app'
+    'words'
 ]
 
 AUTH_USER_MODEL = 'users.CustomUsers'
