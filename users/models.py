@@ -29,12 +29,12 @@ class CustomUsers(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('Email'), unique=True, blank=True, null=True)
     first_name = models.CharField(_('Ism'), max_length=50, blank=False, null=False)
     last_name = models.CharField(_('Familya'), max_length=50, blank=False, null=False)
-    image = models.ImageField(default='default_images/user.png', upload_to='Users/%Y/%m/', blank=True, null=True)
-    mobile = models.CharField(max_length=20, blank=True, null=True)
-    date_joined = models.DateTimeField(default=timezone.now)
-    last_login = models.DateTimeField(default=timezone.now)
-    is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
+    image = models.ImageField(_("Rasm"), default='default_images/user.png', upload_to='Users/%Y/%m/', blank=True, null=True)
+    mobile = models.CharField(_("Telefon raqami"), max_length=20, blank=True, null=True)
+    date_joined = models.DateTimeField(_("Birinchi ro\'yxatdan o'tilgan vaqt"), default=timezone.now)
+    last_login = models.DateTimeField(_("Tizimga kirgan vaqt"), default=timezone.now)
+    is_staff = models.BooleanField(_("SuperAdmin"), default=False)
+    is_active = models.BooleanField(_("Admin"), default=True)
 
     def save(self, *args, **kwargs):
         if not self.user_id:
