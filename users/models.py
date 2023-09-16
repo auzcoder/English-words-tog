@@ -21,5 +21,10 @@ def generate_user_id(sender, instance, **kwargs):
     if not instance.user_id:
         instance.user_id = generate_unique_user_id()
 
+class Users(AbstractBaseUser, PermissionsMixin):
+    user_id = models.IntegerField(_('User ID'), max_length=6, blank=True, null=True, unique=True, default=generate_unique_user_id)
+    email = models.EmailField(_('Email'), unique=True, blank=True, null=True)
+    
 
-        
+
+
