@@ -22,6 +22,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # foydalanuvchilar uchun yaratilgan app
     'users',
+
+    # Standart Admin paenl uchun ui
+    'jazzmin',
     
     'django.contrib.admin',
     'django.contrib.auth',
