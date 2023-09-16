@@ -12,7 +12,7 @@ import random
 def generate_unique_user_id():
     while True:
         user_id = str(random.randint(10001, 99999))
-        if not Users.objects.filter(user_id=user_id).exists():
+        if not CustomUsers.objects.filter(user_id=user_id).exists():
             break
     return user_id
 
@@ -21,7 +21,7 @@ def generate_user_id(sender, instance, **kwargs):
     if not instance.user_id:
         instance.user_id = generate_unique_user_id()
 
-class Users(AbstractBaseUser, PermissionsMixin):
+class CustomUsers(AbstractBaseUser, PermissionsMixin):
     user_id = models.IntegerField(_('User ID'), max_length=6, blank=False, null=False, unique=True, default=generate_unique_user_id)
     username = models.CharField(_('Username'), max_length=15, blank=False, null=False, unique=True)
     email = models.EmailField(_('Email'), unique=True, blank=True, null=True)
