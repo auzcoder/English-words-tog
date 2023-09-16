@@ -29,7 +29,7 @@ class CustomUsers(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('Email'), unique=True, blank=True, null=True)
     first_name = models.CharField(_('Ism'), max_length=50, blank=False, null=False)
     last_name = models.CharField(_('Familya'), max_length=50, blank=False, null=False)
-    image = models.ImageField(default='', upload_to='Users/%Y/%m/', blank=True, null=True)
+    image = models.ImageField(default='default_images/user.png', upload_to='Users/%Y/%m/', blank=True, null=True)
     mobile = models.CharField(max_length=20, blank=True, null=True)
     date_joined = models.DateTimeField(default=timezone.now)
     last_login = models.DateTimeField(default=timezone.now)
