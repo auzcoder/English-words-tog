@@ -24,7 +24,7 @@ def generate_user_id(sender, instance, **kwargs):
 
 # default = generate_unique_user_id
 class CustomUsers(AbstractBaseUser, PermissionsMixin):
-    user_id = models.IntegerField(_('User ID'), blank=False, null=False, unique=True, default=generate_unique_user_id)
+    user_id = models.IntegerField(_('User ID'), blank=False, null=False, unique=True, default=generate_unique_user_id, editable=False)
     username = models.CharField(_('Username'), max_length=15, blank=False, null=False, unique=True)
     email = models.EmailField(_('Email'), unique=True, blank=True, null=True)
     first_name = models.CharField(_('Ism'), max_length=50, blank=False, null=False)
