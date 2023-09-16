@@ -77,4 +77,3 @@ class CustomUserManager(BaseUserManager):
             raise ValueError('is_superuser qiymati True bo\'lishi kerak.')
 
         return self.create_user(username, email, password, **extra_fields)
-    
