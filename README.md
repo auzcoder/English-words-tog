@@ -13,3 +13,6 @@ Ingliz tilidagi so'zlarni tog usulida yodalsh uchun!
     Ishtiyoqga moslashuv: Sizning o'rganish tezligingiz va uslubingizga qarab flash kartalarni ozod tanlay olishingiz mumkin. Ushbu kartalar sizning o'rganish uslubingizni yengillatishga yordam beradi.
 
     Konkret mavzu yoki mavzular uchun: Flash kartalar mavzular bo'yicha yaratilishi mumkin, bu esa sizning o'rganishni maxsus mavzular ustida tashqarilash uchun qulaydir.
+
+
+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
