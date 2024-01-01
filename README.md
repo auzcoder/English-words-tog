@@ -16,3 +16,4 @@ Ingliz tilidagi so'zlarni tog usulida yodalsh uchun!
 
 
 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
+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
